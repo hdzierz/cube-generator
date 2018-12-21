@@ -102,10 +102,7 @@ to activate them, you have to run `python setup.py` from the cube-generator root
 7. rsync cube up
 8. commit new md5sums to repo
 
-The cube version 1.0.2_2 uses the zarr data format. Zarr serialises chunked
-data and, thus, is comprised of a large number of small files for each variable.
-
-The following script will generate a total md5sums for each directory.
+The cube version 2.0.0 uses the zarr data format. The Zarr data format is comprised of a large number of small files for each variable. It is inefficient to build md5sums for each file. The following script will, therefore, generate total md5sums for each variable directory.
 
 ```
 bash scripts/checksum.sh -c [cube]
